@@ -268,7 +268,7 @@ function App() {
             <p className="text-gray-500 text-sm">
               © 2025 OLOPSC Computer Society. All rights reserved.
             </p>
-            <a href="https://terd.zentariph.com" target="_blank" rel="noopener noreferrer" className="fixed bottom-4 left-4 text-gray-600 text-xs hover:text-gray-400 transition-colors duration-200 z-50">
+            <a href="https://terd.zentariph.com" target="_blank" rel="noopener noreferrer" className="fixed bottom-4 left-4 text-gray-400 text-sm hover:text-gray-400 transition-colors duration-200 z-50">
               Developed by Terd
             </a>
           </div>
