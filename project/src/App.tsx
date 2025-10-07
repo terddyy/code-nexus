@@ -1,4 +1,5 @@
 import { Trophy, Calendar, MapPin, Users, Gift, ExternalLink, Facebook, Mail } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/next';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           {/* Logo Placeholder */}
           <div className="mb-8 flex justify-center">
-            <img src="/src/image/codenexus_logo.png" alt="CodeNexus Logo" className="w-32 h-32 rounded-2xl glow-purple"/>
+            <img src="/image/codenexus_logo.png" alt="CodeNexus Logo" className="w-32 h-32 rounded-2xl glow-purple"/>
           </div>
 
           <div className="mb-4">
@@ -35,7 +36,7 @@ function App() {
           {/* Powered by TNC Group */}
           <div className="flex items-center justify-center gap-2 mb-8">
             <p className="text-gray-400 text-lg">Powered by</p>
-            <img src="/src/image/tnc_logo.png" alt="TNC Group Logo" className="h-8 object-contain" />
+            <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-8 object-contain" />
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-8 text-[#FDCFFA]">
@@ -169,7 +170,7 @@ function App() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <SponsorCard title="Powered by" name={<img src="/src/image/tnc_logo.png" alt="TNC Group Logo" className="h-full object-contain" />} />
+            <SponsorCard title="Powered by" name={<img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-full object-contain" />} />
             <SponsorCard title="Marketing Partner" name="Raelevant Marketing" />
             <SponsorCard title="Organized by" name="JPCS - Olopsc OCS" />
           </div>
@@ -273,6 +274,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 }
