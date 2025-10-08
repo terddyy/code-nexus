@@ -77,9 +77,9 @@ function App() {
           {/* Powered By */}
           <div className="flex items-center justify-center gap-3 text-gray-400">
             <span className="text-sm">Powered by</span>
-            <div className="w-24 h-12 bg-white/5 border border-[#4E56C0]/30 rounded-lg flex items-center justify-center text-xs font-bold text-[#D78FEE]">
+            <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer" className="w-24 h-12 bg-white/5 border border-[#4E56C0]/30 rounded-lg flex items-center justify-center text-xs font-bold text-[#D78FEE]">
               TNC GROUP
-            </div>
+            </a>
           </div>
         </div>
       </section>
