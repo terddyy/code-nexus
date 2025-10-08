@@ -1,4 +1,4 @@
-import { Trophy, Calendar, MapPin, Users, Gift, ExternalLink, Facebook, Mail } from 'lucide-react';
+import { Trophy, Calendar, MapPin, Gift, ExternalLink, Facebook, Mail } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -133,30 +133,41 @@ function App() {
         </div>
       </section>
 
-      {/* Event Details Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-transparent to-[#4E56C0]/5">
+      {/* Event Forms Section */}
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4">
-              Event <span className="text-gradient">Highlights</span>
+              Event <span className="text-gradient">Forms</span>
             </h2>
+            <p className="text-xl text-gray-400">Easily access all important event forms here!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <HighlightCard
-              icon={<Trophy className="w-8 h-8" />}
-              title="Competitive Tournament"
-              description="Battle against the best Mobile Legends teams in an epic 3-day tournament"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ExternalLinkForm
+              title="Registration Form"
+              description="Register your team for the OLOPSC Mobile Legends Tournament Season 4"
+              href="https://tinyurl.com/registerolopscmlt2025"
             />
-            <HighlightCard
-              icon={<Gift className="w-8 h-8" />}
-              title="Viewer Raffles"
-              description="Exciting prizes for spectators and supporters throughout the event"
+            <ExternalLinkForm
+              title="T-shirt Order Form"
+              description="Order your official event T-shirt and show your support"
+              href="https://tinyurl.com/tshirtolopscmlt2025"
             />
-            <HighlightCard
-              icon={<Users className="w-8 h-8" />}
-              title="Community Celebration"
-              description="Join fellow gamers in the biggest OLOPSC esports event of the year"
+            <ExternalLinkForm
+              title="Raffle Form"
+              description="Join our exciting raffles for a chance to win amazing prizes"
+              href="https://tinyurl.com/raffleolopscmlt2025"
+            />
+            <ExternalLinkForm
+              title="School Partnership Form"
+              description="Explore partnership opportunities with OLOPSC for future events"
+              href="https://tinyurl.com/spolopscmlt2025"
+            />
+            <ExternalLinkForm
+              title="Information & Details"
+              description="Get complete information about the tournament rules, schedule, and FAQs"
+              href="https://tinyurl.com/infoolopscmlt2025"
             />
           </div>
         </div>
@@ -170,7 +181,11 @@ function App() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <SponsorCard title="Powered by" name={<img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-full object-contain" />} />
+            <SponsorCard title="Powered by" name={
+              <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
+                <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-16 object-contain" />
+              </a>
+            } />
             <SponsorCard title="Marketing Partner" name="Raelevant Marketing" />
             <SponsorCard title="Organized by" name="JPCS - Olopsc OCS" />
           </div>
@@ -293,18 +308,6 @@ function PrizeCard({ place, amount, color }: { place: string; amount: string; co
   );
 }
 
-function HighlightCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
-  return (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-[#9B5DE0] transition-all duration-300">
-      <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-4 text-white">
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-3 text-white">{title}</h3>
-      <p className="text-gray-400 leading-relaxed">{description}</p>
-    </div>
-  );
-}
-
 function SponsorCard({ title, name }: { title: string; name: React.ReactNode }) {
   return (
     <div className="bg-white/5 backdrop-blur-sm border border-[#4E56C0]/30 rounded-2xl p-6">
@@ -313,6 +316,23 @@ function SponsorCard({ title, name }: { title: string; name: React.ReactNode }) 
         {name}
       </div>
     </div>
+  );
+}
+
+function ExternalLinkForm({ title, description, href }: { title: string; description: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#FDCFFA] transition-all duration-300 h-full"
+    >
+      <div className="flex items-center gap-4 mb-3">
+        <ExternalLink className="w-6 h-6 text-[#FDCFFA]" />
+        <h3 className="text-xl font-bold text-white">{title}</h3>
+      </div>
+      <p className="text-gray-400 text-sm">{description}</p>
+    </a>
   );
 }
 
