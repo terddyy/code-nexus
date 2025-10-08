@@ -36,7 +36,9 @@ function App() {
           {/* Powered by TNC Group */}
           <div className="flex items-center justify-center gap-2 mb-8">
             <p className="text-gray-400 text-lg">Powered by</p>
-            <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-8 object-contain" />
+            <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
+              <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-6 object-contain" />
+            </a>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-8 text-[#FDCFFA]">
@@ -173,32 +175,6 @@ function App() {
         </div>
       </section>
 
-      {/* Sponsors Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-black mb-12">
-            <span className="text-gradient">Partners & Organizers</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <SponsorCard title="Powered by" name={
-              <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
-                <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-16 object-contain" />
-              </a>
-            } />
-            <SponsorCard title="Marketing Partner" name="Raelevant Marketing" />
-            <SponsorCard title="Organized by" name="JPCS - Olopsc OCS" />
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-sm border border-[#9B5DE0]/30 rounded-2xl p-8">
-            <p className="text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-              This year, the OLOPSC Mobile Legends Tournament Season 4: Code Nexus Esports League is proudly powered by the <span className="text-[#FDCFFA] font-semibold">TNC Group</span>, a name that has become synonymous with esports excellence in the Philippines.
-            </p>
-            <p className="text-2xl font-bold text-gradient">Join our tournament and become a legend!</p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 relative">
         <div className="absolute inset-0 overflow-hidden">
@@ -243,6 +219,32 @@ function App() {
               <Mail className="w-5 h-5" />
               <span>olopscmlt@gmail.com</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Sponsors Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-black mb-12">
+            <span className="text-gradient">Partners & Organizers</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <SponsorCard title="Powered by" name={
+              <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
+                <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-16 object-contain" />
+              </a>
+            } />
+            <SponsorCard title="Marketing Partner" name="Raelevant Marketing" />
+            <SponsorCard title="Organized by" name="JPCS - Olopsc OCS" />
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm border border-[#9B5DE0]/30 rounded-2xl p-8">
+            <p className="text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
+              This year, the OLOPSC Mobile Legends Tournament Season 4: Code Nexus Esports League is proudly powered by the <span className="text-[#FDCFFA] font-semibold">TNC Group</span>, a name that has become synonymous with esports excellence in the Philippines.
+            </p>
+            <p className="text-2xl font-bold text-gradient">Join our tournament and become a legend!</p>
           </div>
         </div>
       </section>
