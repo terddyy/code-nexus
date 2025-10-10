@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![CodeNexus Banner](./project/public/image/codenexus_logo.png)
 
 **A Modern, High-Performance Landing Page for OLOPSC's Premier Mobile Legends Tournament**
 
