@@ -129,7 +129,7 @@ function App() {
             <p className="text-xl text-gray-400">Compete for glory and amazing prizes!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
             {/* Champion */}
             <div className="lg:col-span-5 bg-gradient-to-br from-[#4E56C0]/20 to-[#9B5DE0]/10 backdrop-blur-sm border-2 border-[#FDCFFA] rounded-3xl p-8 relative overflow-hidden glow-pink">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDCFFA] rounded-full blur-[80px] opacity-20"></div>
@@ -149,11 +149,17 @@ function App() {
               </div>
             </div>
 
-            {/* Other Prizes */}
-            <PrizeCard place="1st" amount="3,500" color="#9B5DE0" />
+            {/* Other Prizes - Row 1 */}
+            <div className="lg:col-start-2">
+              <PrizeCard place="1st" amount="3,500" color="#9B5DE0" />
+            </div>
             <PrizeCard place="2nd" amount="2,000" color="#D78FEE" />
             <PrizeCard place="3rd" amount="1,000" color="#FDCFFA" />
-            <PrizeCard place="4th" amount="500" color="#4E56C0" />
+            
+            {/* Row 2 - 4th Place Centered */}
+            <div className="lg:col-start-3 lg:col-span-1">
+              <PrizeCard place="4th" amount="500" color="#4E56C0" />
+            </div>
           </div>
 
           <div className="mt-12 text-center">
