@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![CodeNexus Banner](./public/image/codenexus_logo.png)
+![CodeNexus Banner](./project/public/image/codenexus_logo.png)
 
 **A Modern, High-Performance Landing Page for OLOPSC's Premier Mobile Legends Tournament**
 
@@ -12,9 +12,8 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4-646cff.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8.svg)](https://tailwindcss.com/)
 
-[View Demo](https://your-demo-url.vercel.app) • [Report Bug](https://github.com/terddyy/code-nexus/issues) • [Request Feature](https://github.com/terddyy/code-nexus/issues)
+[View Demo](https://codenexus.zentariph.com) • [Report Bug](https://github.com/terddyy/code-nexus/issues) • [Request Feature](https://github.com/terddyy/code-nexus/issues)
 
-</div>
 </div>
 
 ---
@@ -24,11 +23,11 @@
 <div align="center">
 
 ### Hero Section
-![Hero Section](./public/screenshot/hero_section_screenshot.png)
+![Hero Section](./project/public/screenshot/hero_section_screenshot.png)
 *Immersive hero section featuring animated gradient backgrounds, tournament branding, and strategic CTAs*
 
 ### Full Page View
-![Full Page](./public/screenshot/codenexus.zentariph.com_.png)
+![Full Page](./project/public/screenshot/codenexus.zentariph.com_.png)
 *Complete landing page showcasing responsive design, prize pool display, event highlights, and footer*
 
 </div>
@@ -37,6 +36,7 @@
 
 ## 📋 Table of Contents
 
+- [Preview](#-preview)
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Tech Stack](#-tech-stack)
