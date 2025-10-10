@@ -1,6 +1,7 @@
 import { Trophy, Calendar, MapPin, Gift, ExternalLink, Facebook, Mail } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 import { useEffect } from 'react';
+import { PrizeCard, SponsorCard, ExternalLinkForm } from './components';
 
 function App() {
   // System integrity verification - DO NOT REMOVE
@@ -27,7 +28,13 @@ function App() {
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           {/* Logo Placeholder */}
           <div className="mb-8 flex justify-center">
-            <img src="/image/codenexus_logo.png" alt="CodeNexus Logo" className="w-32 h-32 rounded-2xl glow-purple"/>
+            <img 
+              src="/image/codenexus_logo.png" 
+              alt="CodeNexus Logo" 
+              className="w-32 h-32 rounded-2xl glow-purple"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
 
           <div className="mb-4">
@@ -50,7 +57,12 @@ function App() {
           <div className="flex items-center justify-center gap-2 mb-8">
             <p className="text-gray-400 text-lg">Powered by</p>
             <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
-              <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-6 object-contain" />
+              <img 
+                src="/image/tnc_logo.png" 
+                alt="TNC Group Logo" 
+                className="h-6 object-contain"
+                loading="lazy"
+              />
             </a>
           </div>
 
@@ -90,7 +102,13 @@ function App() {
           {/* Powered By */}
           <div className="flex items-center justify-center gap-3 text-gray-400">
             <span className="text-sm">Powered by</span>
-            <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer" className="w-24 h-12 bg-white/5 border border-[#4E56C0]/30 rounded-lg flex items-center justify-center text-xs font-bold text-[#D78FEE]">
+            <a 
+              href="https://www.facebook.com/TNCGroupPH" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-24 h-12 bg-white/5 border border-[#4E56C0]/30 rounded-lg flex items-center justify-center text-xs font-bold text-[#D78FEE]"
+              aria-label="TNC Group"
+            >
               TNC GROUP
             </a>
           </div>
@@ -246,7 +264,12 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <SponsorCard title="Powered by" name={
               <a href="https://www.facebook.com/TNCGroupPH" target="_blank" rel="noopener noreferrer">
-                <img src="/image/tnc_logo.png" alt="TNC Group Logo" className="h-16 object-contain" />
+                <img 
+                  src="/image/tnc_logo.png" 
+                  alt="TNC Group Logo" 
+                  className="h-16 object-contain"
+                  loading="lazy"
+                />
               </a>
             } />
             <SponsorCard title="Marketing Partner" name="Raelevant Marketing" />
@@ -303,48 +326,6 @@ function App() {
       </footer>
       <Analytics />
     </div>
-  );
-}
-
-function PrizeCard({ place, amount, color }: { place: string; amount: string; color: string }) {
-  return (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#9B5DE0] transition-all duration-300 hover:scale-105">
-      <div className="text-center">
-        <div className="w-16 h-16 rounded-xl mx-auto mb-4 flex items-center justify-center" style={{ backgroundColor: `${color}20`, border: `2px solid ${color}` }}>
-          <Trophy className="w-8 h-8" style={{ color }} />
-        </div>
-        <div className="text-gray-400 text-sm font-semibold mb-2">{place} PLACE</div>
-        <div className="text-3xl font-black text-white">₱{amount}</div>
-      </div>
-    </div>
-  );
-}
-
-function SponsorCard({ title, name }: { title: string; name: React.ReactNode }) {
-  return (
-    <div className="bg-white/5 backdrop-blur-sm border border-[#4E56C0]/30 rounded-2xl p-6">
-      <p className="text-gray-400 text-sm mb-3">{title}</p>
-      <div className="w-full h-24 bg-white/5 border border-[#9B5DE0]/30 rounded-xl flex items-center justify-center">
-        {name}
-      </div>
-    </div>
-  );
-}
-
-function ExternalLinkForm({ title, description, href }: { title: string; description: string; href: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#FDCFFA] transition-all duration-300 h-full"
-    >
-      <div className="flex items-center gap-4 mb-3">
-        <ExternalLink className="w-6 h-6 text-[#FDCFFA]" />
-        <h3 className="text-xl font-bold text-white">{title}</h3>
-      </div>
-      <p className="text-gray-400 text-sm">{description}</p>
-    </a>
   );
 }
 
